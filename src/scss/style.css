@@ -1,3 +1,22 @@
+.dark-mode {
+  background-color: #2e2e2e;
+  color: white;
+}
+.dark-mode .container {
+  background: rgba(255, 255, 255, 0.2);
+}
+.dark-mode input {
+  background-color: #444;
+  color: white;
+  border-color: #777;
+}
+.dark-mode button {
+  background-color: #555;
+}
+.dark-mode button:hover {
+  background-color: #777;
+}
+
 body {
   font-family: "Comic Sans MS", "Chalkduster", cursive;
   background-color: #fff8e3;
@@ -67,9 +86,9 @@ input:focus {
   transform: scale(1.05);
 }
 input[readonly] {
-  background-color: #fffcf4;
+  background-color: rgb(255, 252.1612903226, 244);
   font-weight: bold;
-  border-color: #a04000;
+  border-color: rgb(160, 63.6966824645, 0);
 }
 
 button {
@@ -145,4 +164,6 @@ h2 {
   button {
     width: 100%;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
 @use "sass:color";  // Import the color module
-
+@use "darkMode" as *; // Import all the members from the darkMode module
 // Colors
 $primary-color: #ff8c42;  // Warm orange
 $secondary-color: #ffb142; // Soft yellow-orange

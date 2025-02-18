@@ -1,0 +1,185 @@
+@use "sass:color";  // Import the color module
+
+// Colors
+$primary-color: #ff8c42;  // Warm orange
+$secondary-color: #ffb142; // Soft yellow-orange
+$background-color: #fff8e3; // Light cream
+$input-bg: #ffefc1; // Light golden input background
+$button-bg: #ff6b6b; // Red-orange button
+$button-hover-bg: #ff4b4b;
+$border-color: #d35400;
+
+// Fonts
+$font-family: "Comic Sans MS", "Chalkduster", cursive;
+
+// General Styling
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+h1 {
+  color: $primary-color;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+// Hero Banner
+.game-banner {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  
+    a {
+      display: block;
+    }
+  
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+      }
+    }
+}
+
+// Container Wrapper
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  max-width: 550px;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+// Labels
+label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: $border-color;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+// Inputs
+input {
+  width: 250px;
+  padding: 10px;
+  font-size: 1.1rem;
+  border: 2px solid $border-color;
+  background-color: $input-bg;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s;
+  text-align: center;
+
+  &:focus {
+    border-color: $primary-color;
+    transform: scale(1.05);
+  }
+
+  &[readonly] {
+    background-color: color.adjust($input-bg, $lightness: 10%);
+    font-weight: bold;
+    border-color: color.adjust($border-color, $lightness: -10%);
+  }
+}
+
+// Buttons
+button {
+  background-color: $button-bg;
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    background-color: $button-hover-bg;
+    transform: scale(1.05);
+  }
+}
+
+// Result Text
+h2 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: $secondary-color;
+}
+
+#result {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: $primary-color;
+}
+
+// Flexbox container for side-by-side inputs
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+
+  .input-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $border-color;
+    margin: 0 5px;
+  }
+
+  input {
+    width: 100%;
+    max-width: 140px;
+  }
+}
+
+// Responsive Design for Smaller Screens
+@media (max-width: 600px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .input-group {
+    flex-direction: column;
+    align-items: center;
+
+    .input-field {
+      width: 100%;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+  }
+
+  input {
+    max-width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}

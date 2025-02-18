@@ -1,0 +1,148 @@
+body {
+  font-family: "Comic Sans MS", "Chalkduster", cursive;
+  background-color: #fff8e3;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+h1 {
+  color: #ff8c42;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.game-banner {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.game-banner a {
+  display: block;
+}
+.game-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.game-banner img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  max-width: 550px;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d35400;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input {
+  width: 250px;
+  padding: 10px;
+  font-size: 1.1rem;
+  border: 2px solid #d35400;
+  background-color: #ffefc1;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s;
+  text-align: center;
+}
+input:focus {
+  border-color: #ff8c42;
+  transform: scale(1.05);
+}
+input[readonly] {
+  background-color: #fffcf4;
+  font-weight: bold;
+  border-color: #a04000;
+}
+
+button {
+  background-color: #ff6b6b;
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+button:hover {
+  background-color: #ff4b4b;
+  transform: scale(1.05);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #ffb142;
+}
+
+#result {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff8c42;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+.input-group .input-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+.input-group p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d35400;
+  margin: 0 5px;
+}
+.input-group input {
+  width: 100%;
+  max-width: 140px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 90%;
+  }
+  .input-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  .input-group .input-field {
+    width: 100%;
+  }
+  .input-group p {
+    margin: 5px 0;
+  }
+  input {
+    max-width: 100%;
+  }
+  button {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

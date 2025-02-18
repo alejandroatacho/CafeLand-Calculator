@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CafeLand Calculator</title>
+    <link rel="stylesheet" href="src/scss/style.css">  <!-- Link to compiled CSS -->
+</head>
+<body>
+    <h1>CafeLand Calculator</h1>
+
+    <div class="container">
+        <!-- Hero Banner -->
+        <div class="game-banner">
+            <a href="https://www.gamegos.com/games/cafelandworld/" target="_blank">
+                <img src="https://www.gamegos.com/wp-content/uploads/2019/07/AllGames_2000x400_CafelandMobile.jpg" 
+                     alt="CafeLand">
+            </a>
+                    </div>
+
+        <label for="requiredAmount">Required Food Amount:</label>
+        <input type="number" id="requiredAmount" value="1000">
+
+        <!-- Input Group (Side by Side) -->
+        <div class="input-group">
+            <div class="input-field">
+                <label for="quantityPerOven">Quantity Per Oven:</label>
+                <input type="number" id="quantityPerOven" value="10">
+            </div>
+
+            <p>+</p> <!-- Centered "+" sign between inputs -->
+
+            <div class="input-field">
+                <label for="quantityPerOvenBonus">Bonus Per Ovens:</label>
+                <input type="number" id="quantityPerOvenBonus" value="0">
+            </div>
+        </div>
+
+        <label for="totalOvenQuantity">Total Amount Per Oven:</label>
+        <input type="number" id="totalOvenQuantity" readonly>
+
+        <label for="ovenBoosterOn">Oven Booster:</label>
+        <input type="checkbox" id="ovenBoosterOn" checked>
+
+        <label for="ovenBoosterPercentage">Oven Booster %:</label>
+        <input type="number" id="ovenBoosterPercentage" value="25">
+
+        <button onclick="calculate()">Calculate</button>
+
+        <h2>Result: <span id="result">-</span></h2>
+    </div>
+
+    <script src="src/dist/ts/calc.js"></script>
+    <script src="src/dist/ts/babyCalc.js"></script>
+</body>
+</html>
